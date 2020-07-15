@@ -41,6 +41,8 @@ function focusdDown (tree, node) {
 }
 
 function checkNode (tree, node) {
+  tree.$emit('node:clicked', node)
+  
   if (!tree.options.checkbox) {
     return
   }
